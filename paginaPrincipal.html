@@ -1,73 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG Amigos em Ação</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
-    <title>Amigos Em Ação</title>
 </head>
 <body>
     <header>
-        <nav id="nav">
-            <div class="navlist">
-
-                <div id="img-logo">
-                    <img src="assets/logo.svg" alt="logo-amigosEmAcao">
+        <nav>
+            <div class="left-section">
+                <div class="logo">
+                    <img class="logo-img" src="assets/logo.svg" alt="Logo Amigos em Ação">
                 </div>
-
-                <div>
-                    <a href="paginaPrincipal.html" title="Início" class="navItem">Início</a>
-                </div>
-                <div>
-                    <a href="#" title="Sobre nós" class="navItem">Sobre nós</a>
-                </div>
-                <div>
-                    <a href="#" title="Eventos" class="navItem">Eventos</a>
-                </div>
-                <div>
-                    <a href="#" title="Equipe" class="navItem">Equipe</a>
-                </div>
-                <div>
-                    <a href="#" title="Localização" class="navItem">Localização</a>
-                </div>
-                <div>
-                    <a href="#" title="Feedback" class="navItem">Feedback</a>
-                </div>
-
-                <!--<div>
-                    <div>
-                        <a href="#" title="Entrar" class="entrar">Entrar</a>
-                    </div>
-                    <div>
-                        <a href="#" title="Se voluntariar" class="se-voluntariar">Se voluntariar</a>
-                    </div>
-                </div>
-                -->
-                
+                <ul>
+                    <li><a href="#inicio" class="nav-item">Início</a></li>
+                    <li><a href="#sobre-nos" class="nav-item">Sobre nós</a></li>
+                    <li><a href="#eventos" class="nav-item">Eventos</a></li>
+                    <li><a href="#equipe" class="nav-item">Equipe</a></li>
+                    <li><a href="#localizacao" class="nav-item">Localização</a></li>
+                    <li><a href="#propositos" class="nav-item">Propósitos</a></li>
+                    <li><a href="#feedback" class="nav-item">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="auth">
+                <a href="#">Entrar</a>
+                <a href="#">Se voluntariar</a>
+            </div>
+        </nav>
     </header>
-
-    <br>
-    <br>
-
-    <div id="div-imgInicial">
-        <img id="imgInicial" src="assets/img-inicio.png" alt="img-amigosEmAcao">
-        <div id="conteudo-centralizado">
-            <div id="subtitulo">
-                <h1>Há mais de 20 anos Transformando Vidas!</h1>
+    <main>
+        <section id="inicio" class="hero">
+            <img src="assets/img-inicio.png" alt="Imagem de ajuda" class="hero-image">
+            <div class="hero-content">
+                <h1>Há mais de 20 anos<br><span>Transformando<br>Vidas!</span></h1>
+                <div class="hero-buttons">
+                    <a href="#" class="btn primary">Quero ajudar</a>
+                    <a href="#" class="btn secondary">Procuro ajuda</a>
+                </div>
             </div>
-            <div id="botoes">
-                <button id="btn-queroAjudar">
-                    <a href="#" role="button">Quero ajudar</a>
-                </button>
-                <button id="btn-procuroAjuda">
-                    <a href="#" role="button">Procuro ajuda</a>
-                </button>
+        </section>
+
+        <section id="sobre-nos" class="about-us">
+            <div class="about-us-content">
+                <h3>Sobre nós</h3>
+                <h2>A jornada da<br>Amigos em Ação</h2>
+                <p>Somos um ONG com mais de 20 anos de histórias, juntando forças para um propósito único: tornar nossa sociedade cada vez melhor.</p>
+                <p>Todos os anos lutamos para a diminuição da desigualdade ao nosso redor, ajudando desde cestas básicas e medicamentos a educação.</p>
+                <p>Todos os recursos obtidos através das doações são convertidos para fins sociais.</p>
+                <p>Nós somos os Amigos em Ação!</p>
             </div>
-        </div>
-    </div>
-    
-    
+            <div class="about-us-image">
+                <img class="stroke-jornada" src="assets/stroke-jornada.png" alt="">
+                <img class="img-jornada" src="assets/img-jornada.png" alt="Equipe Amigos em Ação">
+            </div>
+        </section>
+
+        <section id="eventos" class="projects-events">
+            <div class="projects-events-container">
+                <div class="mosaic">
+                    <img class="diag-dir" src="assets/img-feijoada.jpg" alt="Imagem 1">
+                    <img class="diag-esq" src="assets/img-crianca.jpg" alt="Imagem 2">
+                    <img class="diag-esq" src="assets/img-agasalhos.jpg" alt="Imagem 3">
+                    <img class="diag-dir" src="assets/img-reciclagem.jpg" alt="Imagem 4">
+                </div>
+                <div class="projects-events-content">
+                    <br>
+
+                    <h3>Eventos</h3>
+                    <h2>Projetos e eventos</h2>
+
+                    <br>
+                    <br>
+                    
+                    <p>&emsp;&emsp; Nossa Associação promove regularmente atividades e projetos às famílias carentes de Jaraguá do Sul, tais como:</p>
+
+                    <br>
+
+                    <ul>
+                        <li>Eventos para doação e distribuição de alimentos</li>
+                        <br>
+                        
+                        <li>Campanhas para distribuição de bens materiais, como agasalhos, kits escolares, móveis usados</li>
+                        <br>
+                        
+                        <li>Arrecadação de tampinhas, lacres, papéis e demais itens para reciclagem de materiais</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adicionar as demais seções -->
+        <section id="equipe" class="section">Equipe Content</section>
+        <section id="localizacao" class="section">Localização Content</section>
+        <section id="propositos" class="section">Propósitos Content</section>
+        <section id="feedback" class="section">Feedback Content</section>
+        
+    </main>
 </body>
 </html>

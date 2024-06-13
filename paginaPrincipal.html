@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -94,10 +97,92 @@
 
         <!-- Adicionar as demais seções -->
         <section id="equipe" class="section">Equipe Content</section>
+
+            <div class="mosaic owl-carousel">
+                <div class="carousel-icon">
+                    <img src="assets/img-crianca.jpg" alt="Voluntário">                        
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item2">
+                        <br><br>
+                        <h3 >Jucelia Dobrychtop</h3>
+                        <br> <br>
+                        <p>O trabalho voluntário é uma experiência incrível, um aprendizado imenso a cada solicitação atendida. Ao participar de uma nova campanha, você não sabe qual resultado terá, mas ao chegar no término, é uma sensação incrível de dever cumprido. Amigos em Ação me ensinou que sempre podemos colaborar, participar e fazer muita diferença, que um pouco nosso é muito para alguém, e que a roupa "usada" se transforma em "roupa nova" nas mãos de quem precisa. A satisfação de estar no Amigos em Ação é enorme, orgulho de fazer parte de uma equipe que faz a diferença!</p>
+                    </div>
+                </div>
+                
+                <div><img src="assets/img-crianca.jpg" alt="Imagem 2"></div>
+                <div><img src="assets/img-agasalhos.jpg" alt="Imagem 3"></div>
+                <div><img src="assets/img-reciclagem.jpg" alt="Imagem 4"></div>
+            </div>
+
         <section id="localizacao" class="section">Localização Content</section>
-        <section id="propositos" class="section">Propósitos Content</section>
+
+        <section id="propositos" class="section">
+            <h3 class="propositos">Propósitos</h3>
+            <h2>Nossos propósitos como ONG</h2>
+
+            <br><br><br><br>
+
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="assets/missao-img.png" alt="Missão">
+                    </div>
+                    <h3 class="missao">Missão</h3>
+                    <p>Combater as desigualdades sociais por meio de ações concretas e sustentáveis; Fomentar o espírito de voluntariado e desenvolver programas nas áreas de cultura, esporte, educação e lazer que reforçam a cidadania e a inclusão social.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="assets/visao-img.png" alt="Visão">
+                    </div>
+                    <h3>Visão</h3>
+                    <p>Ser uma força transformadora na sociedade, promovendo a igualdade e a inclusão social. Aspiramos a um mundo onde cada indivíduo tenha a oportunidade de contribuir e prosperar, independentemente de sua origem ou condição social.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <img src="assets/valores-img.png" alt="Valores">
+                    </div>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Compromisso com a igualdade;</li>
+                        <li>Integridade e transparência;</li>
+                        <li>Respeito pela diversidade;</li>
+                        <li>Empatia e compaixão;</li>
+                        <li>Empoderamento;</li>
+                        <li>Colaboração e parceria;</li>
+                        <li>Inovação;</li>
+                        <li>Voluntariado ativo.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+
+
         <section id="feedback" class="section">Feedback Content</section>
         
     </main>
+
+    <!-- jQuery (necessário para o Owl Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Inicialização do Owl Carousel -->
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true
+            });
+        });
+    </script>
+
 </body>
 </html>

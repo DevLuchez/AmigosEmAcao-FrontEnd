@@ -151,6 +151,7 @@ nav ul li a {
     font-weight: bold;
     background: #2999E7;
     color: #fff;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -186,7 +187,7 @@ nav ul li a {
     font-weight: bold;
     text-align: center;
     margin-bottom: 3rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .about-us-content p {
@@ -447,7 +448,7 @@ nav ul li a {
     font-weight: bold;
     text-align: center;
     margin-bottom: 3rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -492,7 +493,7 @@ nav ul li a {
 
 .owl-prev,
 .owl-next {
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
@@ -512,7 +513,7 @@ nav ul li a {
 }
 
 .owl-next {
-    right: 10px;
+    right: 5rem;
 }
 
 /* Seção Parcerias*/
@@ -588,169 +589,155 @@ nav ul li a {
     }
 }
 
+/*Seção de localização*/
 .map {
-    width: 50%; 
-    height: 400px; 
+    width: 50%;
+    height: 400px;
     margin: 0 auto;
 }
 
+/*Seção Feedbacks*/
+
 #feedback {
-    display: flex;
-    flex-wrap: column;
-    align-items: flex-start;
     padding: 50px;
+    margin-left: 10px;
+}
+
+.central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feedback-header {
     flex: 1;
+    text-align: left;
 }
 
 .feedback-header h3 {
-    text-align: left;
+    margin: 0;
 }
 
 .feedback-header h2 {
     color: #2999E7;
     margin-top: 10px;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.feedback-image {
-    flex: 1;
-    display: flex;
-    margin-left: 10px;
-    justify-content: flex-start;  
-    align-items: center;
+.feedback-header p {
+    font-size: 12px;
 }
 
 .feedback-image img {
-    max-width: 50%;
+    margin-left: 300px;
+    max-width: 100%;
     height: auto;
 }
 
 .feedback-form {
     flex: 2;
+    margin-left: 300px;
 }
 
 .feedback-form form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
 
-.feedback-form input, 
+.feedback-form p {
+    color: #2999E7;
+}
+
+.labelStyle {
+    margin-bottom: 5px;
+}
+
+.feedback-form input,
 .feedback-form textarea {
     width: 100%;
     max-width: 400px;
-    margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .feedback-form input[type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
     background-color: #2999E7;
     border: none;
-    color: white;
+    color: #FFF;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 40px;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.feedback-form input[type="submit"]:hover {
+    background: #2077b6;
+    transition: 0.3s;
 }
 
 
 
+.infield {
+    position: relative;
+    margin: 8px 0px;
+    width: 100%;
+}
 
-
-
-
-
-.container {
-    text-align: center;
-    background-color: #1a3e57;
-    color: white;
-    padding: 20px;
-  }
-  
-  .header {
-    margin-bottom: 20px;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .left-column, .center-column, .right-column {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .qr-code {
-    width: 150px;
-    height: 150px;
-    background-color: grey; /* Placeholder para o QR Code */
-    margin: 0 auto;
-  }
-  
-  .join-us {
-    background-color: #2b6da9;
-    padding: 20px;
-    margin: 20px 0;
-  }
-  
-  .volunteer-button {
-    background-color: #ffffff;
-    color: #2999E7;
+textarea, input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f3f3f3;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    border-radius: 10px;
-  }
-  
-  .footer {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #1a3e57;
-  }
-  
-  .footer div {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .partners, .support, .newsletter {
-    text-align: left;
-  }
-  
-  /* Seção Propósitos */
-  #propositos {
+    outline: none;
+}
+
+.labelStyle {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: #2999E7;
+    transition: 0.3s;
+}
+
+input:focus ~ .labelStyle {
+    width: 100%;
+}
+
+/* Seção Propósitos */
+#propositos {
     padding: 100px 0;
     text-align: center;
     background-color: #FFFEF5;
-  }
-  
-  #propositos h2 {
+}
+
+#propositos h2 {
     color: #2999E7;
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
-  }
-  
-  #propositos p {
+}
+
+#propositos p {
     color: #2B2B2B;
     margin-bottom: 3rem;
-  }
-  
-  .cards-container {
+}
+
+.cards-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  
-  .card {
+}
+
+.card {
     background: #FFFEF5;
     border-radius: 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -760,10 +747,10 @@ nav ul li a {
     position: relative;
     overflow: hidden;
     height: 490px;
-  }
-  
-  
-  .card::before {
+}
+
+
+.card::before {
     content: '';
     position: absolute;
     width: 180px;
@@ -771,80 +758,187 @@ nav ul li a {
     background-color: #2999E7;
     animation: animate 8s linear infinite;
     transform-origin: top left;
-  }
-  
-  .card::after {
+}
+
+.card::after {
     content: '';
     position: absolute;
     inset: 2px;
     background-color: #FFFEF5;
     border-radius: 25px;
-  }
-  
-  @keyframes animate {
+}
+
+@keyframes animate {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
-  }
-  
-  .card-icon {
+}
+
+.card-icon {
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-  }
-  
-  .card-icon img {
+}
+
+.card-icon img {
     width: 100px;
     height: 100px;
-  }
-  
-  .card h3 {
+}
+
+.card h3 {
     color: #2B2B2B;
     margin-top: 80px;
     margin-bottom: 1rem;
     position: absolute;
     z-index: 1;
-  }
-  
-  .card p, .card ul {
+}
+
+.card p,
+.card ul {
     text-align: justify;
     color: #2B2B2B;
     margin-top: 140px;
     margin-right: 30px;
     position: absolute;
     z-index: 1;
-  }
-  
-  .card ul {
+}
+
+.card ul {
     list-style-type: none;
     padding-left: 0;
-  }
-  
-  .card ul li {
+}
+
+.card ul li {
     margin-bottom: 0.5rem;
     position: relative;
-  }
-  
-  .card ul li::before {
+}
+
+.card ul li::before {
     content: '•';
     color: #2999E7;
     position: absolute;
     left: -15px;
-  }
+}
 
-  .login-btn{
-   
-    font-size: 2.5vh;
+/*Rodapé*/
+.container {
+    text-align: center;
+    background-color: #1a3e57;
     color: white;
-    border: 1px solid #ffffff; /* Largura e cor da borda */
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+}
+
+.left-column,
+.center-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-column p {
+    width: 500px;
+}
+
+.info-container {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.info-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-item {
+    text-align: center;
+    flex: 1;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    /* Placeholder para o QR Code */
+    margin: 0 auto;
+}
+
+.join-us {
+    background-color: #1e4764;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.volunteer-button {
+    background-color: #ffffff;
+    color: #2999E7;
+    border: none;
     padding: 10px 20px;
-    background-color: #039BE5;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: #1a3e57;
+    align-content: right;
+}
+
+.footer div {
+    padding: 20px;
+}
+
+.login-btn {
+    font-size: 15px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5vh;
-    cursor:pointer; /* Cursor de ponteiro ao passar o mouse */
     border-color: #ffffff;
-    }
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    color: #1a3e57;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.partners,
+.support,
+.newsletter {
+    text-align: left;
+    color: #ffffff;
+}
+
+.footer p {
+    color: rgba(255, 254, 245, 0.65);
+}

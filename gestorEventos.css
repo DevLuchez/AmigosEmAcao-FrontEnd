@@ -1,6 +1,6 @@
 /* General Styles */
 body, html {
-    background-color: #FFFEF5;
+    background-color: #fffcfc;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -50,8 +50,6 @@ body, html {
 .profile-img {
     width: 100px;
     height: 100px;
-    background-color: #ccc;
-    border-radius: 50%;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
@@ -204,7 +202,7 @@ input:focus ~ .label {
     grid-column: span 2;
     padding: 10px 20px;
     background-color: #2999E7;
-    color: #FFFEF5;
+    color: #fffcfc;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -223,7 +221,7 @@ input:focus ~ .label {
 }
 
 .card {
-    background-color: #fffef588;
+    background-color: #fffcfc88;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;

@@ -14,7 +14,9 @@
     <div class="container">
         <aside class="sidebar">
             <div class="profile">
-                <img class="logo-img" src="logo.svg" alt="Logo Amigos em Ação">
+                <div class="profile-img">
+                    <img src="logo.svg" alt="Amigos Em Ação">
+                </div>
             </div>
             <nav class="menu">
                 <ul>
@@ -30,7 +32,6 @@
                     <li>
                         <a href="gestorFeedback.html">Feedbacks</a>
                     </li>
-                </ul>
             </nav>
             <div class="logout">
                 <a href="paginaPrincipal.html">Sair da Conta</a>
@@ -40,30 +41,94 @@
             <header class="header">
                 <p class="username">Bem vindo,<br><span>{gestor}</span></p>
             </header>
- 
-            <!-- Nova aba para Lista de Voluntários -->
-            <section class="control" id="volunteers-tab" style="display: none;">
+
+            <!-- Aba principal -->
+            <section class="control">
+
+                <!-- Botões troca de aba -->
                 <div class="tabs">
-                    <button class="tab active" id="volunteers-tab-header">Criar eventos</button>
-                    <button class="tab" id="people-tab-header">lista de pessoas ajudadas</button>
+                    <button class="tab active" id="pessoas-tab">Planilha Pessoas Que Procuram Ajuda</button>
+                    <button class="tab" id="voluntarios-tab">Planilha Voluntários</button>
                 </div>
-                <div id="volunteers-content">
-                    <!-- Conteúdo da aba lista de Voluntários -->
-                    <p>Conteúdo da lista de Voluntários</p>
+
+                <!-- Aba Planilha Voluntários -->
+                <div id="voluntarios-form" class="hidden">
+                    <div id="volunteers-content">
+                        <table id="voluntarios-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Telefone</th>
+                                    <th>Email</th>
+                                    <th>Editar/Deletar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>João Silva</td>
+                                    <td>123456789</td>
+                                    <td>joao@example.com</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Souza</td>
+                                    <td>987654321</td>
+                                    <td>maria@example.com</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Adicione mais voluntários conforme necessário -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Aba Planilha Pessoas que precisam de ajuda -->
+                <div id="pessoas-form">
+                    <div id="pessoas-content">
+                        <table id="pessoas-table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Telefone</th>
+                                    <th>Descrição Familiar</th>
+                                    <th>Necessidade</th>
+                                    <th>Editar/Deletar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>João Silva</td>
+                                    <td>123456789</td>
+                                    <td>filho, gato</td>
+                                    <td>comida</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="delete-btn"><i class="fa-solid fa-trash" id="delete"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Souza</td>
+                                    <td>987654321</td>
+                                    <td>gato, rato</td>
+                                    <td>leite</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="delete-btn"><i class="fa-solid fa-trash" id="delete"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Adicione mais pessoas conforme necessário -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
-            
-            <!-- Nova aba para Lista de Pessoas Ajudadas -->
-            <section class="control" id="pessoas-tab" style="display: none;">
-                <div class="tabs">
-                    <div class="tab active" id="pessoas-tab-header">Lista de pessoas ajudadas</div>
-                </div>
-                <div id="pessoas-content">
-                    <!-- Conteúdo da aba Lista de Voluntários -->
-                    <p>Conteúdo da lista de pessoas ajudadas </p>
-                </div>
-            </section>
- 
+
         </main>
     </div>
 </body>

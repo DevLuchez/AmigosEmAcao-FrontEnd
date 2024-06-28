@@ -160,7 +160,7 @@ body, html {
 .form-group input {
     width: 100%;
     padding: 10px 0 10px 10px;
-    background-color: #fffcfc;
+    background-color: #fff;
     border: none;
     outline: none;
 }
@@ -176,7 +176,7 @@ body, html {
     transition: 0.3s;
 }
 
-input:focus ~ .label {
+input:focus~.label {
     width: 100%;
 }
 

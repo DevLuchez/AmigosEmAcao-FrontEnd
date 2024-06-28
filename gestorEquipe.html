@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor - Equipe</title>
+    <link rel="stylesheet" type="text/css" href="gestorEquipe.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="gestorEquipe.js"></script>
+</head>
+<body>
+    <!-- Menu lateral e título da aba -->
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img class="logo-img" src="logo.svg" alt="Logo Amigos em Ação">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="perfilGestor.html">Meu perfil</a>
+                    </li>
+                    <li>
+                        <a href="gestorEquipe.html" class="active">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="gestorEventos.html">Eventos</a>
+                    </li>
+                    <li>
+                        <a href="gestorFeedback.html">Feedbacks</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="paginaPrincipal.html">Sair da Conta</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <p class="username">Bem vindo,<br><span>{gestor}</span></p>
+            </header>
+ 
+            <!-- Nova aba para Lista de Voluntários -->
+            <section class="control" id="volunteers-tab" style="display: none;">
+                <div class="tabs">
+                    <button class="tab active" id="volunteers-tab-header">Criar eventos</button>
+                    <button class="tab" id="people-tab-header">lista de pessoas ajudadas</button>
+                </div>
+                <div id="volunteers-content">
+                    <!-- Conteúdo da aba lista de Voluntários -->
+                    <p>Conteúdo da lista de Voluntários</p>
+                </div>
+            </section>
+            
+            <!-- Nova aba para Lista de Pessoas Ajudadas -->
+            <section class="control" id="pessoas-tab" style="display: none;">
+                <div class="tabs">
+                    <div class="tab active" id="pessoas-tab-header">Lista de pessoas ajudadas</div>
+                </div>
+                <div id="pessoas-content">
+                    <!-- Conteúdo da aba Lista de Voluntários -->
+                    <p>Conteúdo da lista de pessoas ajudadas </p>
+                </div>
+            </section>
+ 
+        </main>
+    </div>
+</body>
+</html>

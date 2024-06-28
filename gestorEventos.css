@@ -1,6 +1,6 @@
 /* General Styles */
-body, html {
-    background-color: #fffcfc;
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -15,18 +15,7 @@ body, html {
     height: 100vh;
 }
 
-/* Header Styles */
-.header {
-    margin-bottom: 20px;
-}
-
-.header .seja {
-    color: #2999E7;
-    font-size: 0.9em;
-    font-weight: bold;
-}
-
-/* Sidebar Styles */
+/* Barra lateral estilo */
 .sidebar {
     background-color: #e3e3e338;
     width: 250px;
@@ -103,20 +92,20 @@ body, html {
 .header .username {
     font-size: 2.5em;
     font-weight: bold;
-    font-weight: bold;
 }
 
-.header span{
+.header span {
     color: #2999E7;
 }
 
-/* Events Section Styles */
+/* Background da aba principal */
 .events {
     background-color: #e3e3e338;
     padding: 20px;
     border-radius: 10px;
 }
 
+/* Botões troca de aba */
 .tabs {
     display: flex;
     justify-content: space-around;
@@ -144,8 +133,10 @@ body, html {
 .tab.active {
     color: #2999E7;
     border-bottom: 2px solid #2999E7;
+    font-weight: bold;
 }
 
+/* Criar eventos */
 .create-event-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -169,7 +160,7 @@ body, html {
 .form-group input {
     width: 100%;
     padding: 10px 0 10px 10px;
-    background-color: #fffcfc;
+    background-color: #fff;
     border: none;
     outline: none;
 }
@@ -185,7 +176,7 @@ body, html {
     transition: 0.3s;
 }
 
-input:focus ~ .label {
+input:focus~.label {
     width: 100%;
 }
 
@@ -193,13 +184,13 @@ input:focus ~ .label {
     position: absolute;
     right: 10px;
     top: 35px;
-    color: #aaa;
+    color: #2999E7;
 }
 
 .event-cover {
     width: 100%;
     height: 100px;
-    background-color: #fffcfc;
+    background-color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,7 +206,7 @@ input:focus ~ .label {
     grid-column: span 2;
     padding: 10px 20px;
     background-color: #2999E7;
-    color: #fffcfc;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -223,8 +214,11 @@ input:focus ~ .label {
 }
 
 .save-btn:hover {
-    background-color: #217cbd;
+    background-color: #0056b3;
 }
+
+
+
 
 /* Visualizar eventos */
 .events-cards {
@@ -234,7 +228,7 @@ input:focus ~ .label {
 }
 
 .card {
-    background-color: #fffcfc88;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -263,40 +257,97 @@ input:focus ~ .label {
     margin-top: 10px;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn,
+.delete-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 1.2em;
 }
 
-.edit-btn:hover, .delete-btn:hover {
+.edit-btn:hover,
+.delete-btn:hover {
     color: #0056b3;
 }
+
+
+/* Estilo do Popup deletar eventos */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #ddd;
+}
+
+/* Estilo do Popup editar eventos */
+#edit-event-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 400px;
+    display: none;
+}
+
+#edit-event-popup.visible {
+    display: block;
+}
+
 
 /* Ocultar seção */
 .hidden {
     display: none;
 }
 
-/* Estilo do botão ativo */
-.tab.active {
-    border-bottom: 2px solid #2999E7;
-    font-weight: bold;
-}
 
-/* Responsive Styles */
+/* Estilo responsivo */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+
     .sidebar {
         width: 100%;
         height: auto;
     }
+
     .main-content {
         padding: 10px;
     }
+
     .create-event-form {
         grid-template-columns: 1fr;
     }
